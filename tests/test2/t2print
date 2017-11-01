@@ -1,0 +1,13 @@
+.public print
+
+.section .text.print
+print:
+sub r4 r4
+add r4 #8192
+mov r9 sp ia
+out r4 r9
+mov pc lr
+
+
+.end
+

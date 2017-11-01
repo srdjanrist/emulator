@@ -1,0 +1,15 @@
+#Tabela simbola
+ord         name  section   offset  length  bind  def
+  0          UND        0        0       0     L    1
+  1  .text.print        1        0      20     L    1
+  2        print        1        0             G    1
+
+
+#RELOCATIONS
+
+
+#.text.print
+C2 20 80 00 C1 24 20 00 
+CE 4C 80 00 CD 49 00 00 
+CE 84 40 00 
+

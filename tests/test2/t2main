@@ -1,0 +1,15 @@
+.extern print
+.public main
+
+.section .text.main
+main:
+sub r3 r3
+add r3 #4096
+loop:
+in r2 r3
+mov sp r2 db
+ldc r1 =print
+call r1 0
+call loop
+
+.end

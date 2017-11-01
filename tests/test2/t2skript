@@ -1,0 +1,3 @@
+.data.ivt
+.=64
+.text.int0

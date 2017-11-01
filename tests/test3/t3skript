@@ -1,0 +1,5 @@
+.data.ivt
+.=64
+.text.int0
+.text.main
+.text.int1

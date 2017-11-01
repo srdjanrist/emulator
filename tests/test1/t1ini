@@ -1,0 +1,16 @@
+.extern main
+
+.section .data.ivt
+.long +int0
+.long +int1
+
+.section .text.int0
+int0:
+ldc r0 =main
+call r0 0
+
+.section .text.int1
+int1:
+add r15 #1
+
+.end

@@ -1,0 +1,42 @@
+.public main
+
+.section .text.0
+main:
+ldc r0 =N
+sub r1 r1
+add r1 #3
+sub r2 r2
+add r2 #8192
+loop1:
+ldr r3 r0
+add r0 #1
+out r2 r3
+subs r1 #1
+callne loop1
+
+sub r9 r9
+ldc r0 =EOL
+ldr r0 r0
+div r2 #2
+
+more:
+in r3 r2
+cmp r3 r0
+calleq sum
+sub r3 #48
+mul r9 #10
+add r9 r3
+callne more
+
+sum:
+sub r0 r0
+summore:
+add r0 r9
+subs r9 #1
+callne summore
+
+.section .data.0
+N: .char 'n', '='
+EOL: .char 10
+
+.end
